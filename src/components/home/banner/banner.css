@@ -1,0 +1,32 @@
+/* HOME HEADER ---------------------------------------------------- */
+.header {
+    display: flex;
+    min-height: fit-content;
+    height: 500px;
+    background: linear-gradient(rgba(46, 46, 46, 0.8), rgba(46, 46, 46, 0.8)), url(../../../assets/images/websiteImages/cover.JPG);
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.headerText {
+    width: fit-content;
+    text-align: center;
+}
+
+.headerText>h3 {
+    color: white;
+}
+
+.headerText>h1 {
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+.header>svg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}

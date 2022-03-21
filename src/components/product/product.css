@@ -1,0 +1,49 @@
+.lpConBackground{    
+    margin: 50px auto;
+    max-width: 1600px;
+    height: fit-content;   
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+}
+
+.lpCon{
+    max-height: 80%;
+    overflow: auto;
+    background-color: white;
+    display: flex;
+    /* flex-wrap: wrap; */
+    width: 80%;    
+}
+.lpImgCon{
+    flex: 40%;
+    max-width: 300px;
+    padding: 20px;    
+}
+.lpImgCon>img{
+    width: 100%;
+}
+.lpTextCon{
+    flex: 60%;
+    padding: 20px;   
+}
+.lpTextCon>h1, .lpTextCon>h2, .lpTextCon>h3, .lpTextCon>p{
+    margin: 10px 5px;
+}
+#addToCart{
+    padding: 5px 10px;
+    border: 2px solid #001417;
+    outline: none;
+    background-color: #001417;
+    color: white;
+}
+#addToCart:hover{
+    background-color: white;
+    color: black;
+}
+
+@media (max-width: 700px){
+    .lpCon{
+        flex-direction: column;
+    }
+}

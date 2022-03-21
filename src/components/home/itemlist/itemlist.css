@@ -1,0 +1,57 @@
+.cText {
+    margin: auto;
+    margin-top: 50px;
+    max-width: 1200px;
+    font-size: 40px;
+    padding: 10px 30px;
+    text-transform: capitalize;
+}
+
+.cCon {
+    margin: auto;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.cCardSpace {
+    max-width: 25%;
+    flex: 25%;
+    background-color: white;
+    padding: 20px;
+}
+
+.cCard {    
+    border-bottom: 4px solid #233a3e;
+    padding: 10px;
+    
+}
+
+
+.cCard>img {    
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+@media (max-width: 850px) {
+    .cCardSpace {
+        flex: 33.33%;
+        max-width: 33.33%;
+    }
+}
+
+@media (max-width: 650px) {
+    .cCardSpace {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 400px) {
+    .cCardSpace {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
