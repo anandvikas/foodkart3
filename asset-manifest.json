@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/foodkart3/static/css/main.b925240d.css",
-    "main.js": "/foodkart3/static/js/main.3663d947.js",
+    "main.js": "/foodkart3/static/js/main.3cb0cb6b.js",
     "static/media/cover.JPG": "/foodkart3/static/media/cover.66439a837404e93da2e4.JPG",
     "static/media/biryani.JPG": "/foodkart3/static/media/biryani.474eb10463e682b7d447.JPG",
     "static/media/pizza1.JPG": "/foodkart3/static/media/pizza1.39167683d4234aa48ee0.JPG",
@@ -25,10 +25,10 @@
     "static/media/idlisambhar.JPG": "/foodkart3/static/media/idlisambhar.8991a8e2b4be935bc2cd.JPG",
     "index.html": "/foodkart3/index.html",
     "main.b925240d.css.map": "/foodkart3/static/css/main.b925240d.css.map",
-    "main.3663d947.js.map": "/foodkart3/static/js/main.3663d947.js.map"
+    "main.3cb0cb6b.js.map": "/foodkart3/static/js/main.3cb0cb6b.js.map"
   },
   "entrypoints": [
     "static/css/main.b925240d.css",
-    "static/js/main.3663d947.js"
+    "static/js/main.3cb0cb6b.js"
   ]
 }
