@@ -48,12 +48,12 @@ const App = () => {
         updateListByNav={updateListByNav}
       />
       <Routes>
-        <Route path="/" element={state2}/>
-        <Route path="/about" element={<About/>}/>
-        <Route path="/customer_support" element={<CustSup/>}/>
-        <Route path="/contact" element={<Contact/>}/>
-        <Route path="/cart" element={<Cart cartItems={cartItems}/>}/>
-        <Route path="/product/:id" element={state1}/>
+        <Route path="/foodkart3/" element={state2}/>
+        <Route path="/foodkart3/about" element={<About/>}/>
+        <Route path="/foodkart3/customer_support" element={<CustSup/>}/>
+        <Route path="/foodkart3/contact" element={<Contact/>}/>
+        <Route path="/foodkart3/cart" element={<Cart cartItems={cartItems}/>}/>
+        <Route path="/foodkart3/product/:id" element={state1}/>
         <Route path="*" element={<h1>404 error</h1>}/>
       </Routes>
       <Footer/>      

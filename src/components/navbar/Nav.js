@@ -28,7 +28,7 @@ const Nav = (props) => {
         <section className='navBack'>
             <nav className="navCon" >
                 <div className="section1">
-                    <NavLink to='/' className='navLogoCon'>
+                    <NavLink to='/foodkart3/' className='navLogoCon'>
                         <img src={logo} alt='Logo' />
                         <h1>Food Kart</h1>
                     </NavLink>
@@ -40,7 +40,7 @@ const Nav = (props) => {
                 <div className={state}>
                     <div className='sec2component' id='navLinkCon'>
                         <div className="links dropdown">
-                            <NavLink to='/' className="linksProducts">Products</NavLink>
+                            <NavLink to='/foodkart3/' className="linksProducts">Products</NavLink>
                             {/* <div className='linksProductsDrop'>
                                 <NavLink to='/' onClick={()=>{props.updateListByNav('all')}}>all</NavLink>
                                 <NavLink to='/' onClick={()=>{props.updateListByNav('meals')}}>meals</NavLink>
@@ -48,9 +48,9 @@ const Nav = (props) => {
                                 <NavLink to='/' onClick={()=>{props.updateListByNav('drinks')}}>drinks</NavLink>
                             </div> */}
                         </div>
-                        <NavLink to='/about' className="links">About</NavLink>
-                        <NavLink to='/customer_support' className="links">Customer Support</NavLink>
-                        <NavLink to='/contact' className="links">Contact</NavLink>
+                        <NavLink to='/foodkart3/about' className="links">About</NavLink>
+                        <NavLink to='/foodkart3/customer_support' className="links">Customer Support</NavLink>
+                        <NavLink to='/foodkart3/contact' className="links">Contact</NavLink>
                     </div>
                     <div className='sec2component' id='navSearchCon'>
                         <form action="xyz.php" className='searchBar'>
@@ -62,7 +62,7 @@ const Nav = (props) => {
                     </div>
                     <div className='sec2component' id='navLogCon'>
                         <button id='login'>Login</button>
-                        <NavLink to='/cart' id='cart'><LocalMallIcon /></NavLink>
+                        <NavLink to='/foodkart3/cart' id='cart'><LocalMallIcon /></NavLink>
                     </div>
                 </div>
             </nav>
