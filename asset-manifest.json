@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/foodkart3/static/css/main.b925240d.css",
+    "main.js": "/foodkart3/static/js/main.3663d947.js",
+    "static/media/cover.JPG": "/foodkart3/static/media/cover.66439a837404e93da2e4.JPG",
+    "static/media/biryani.JPG": "/foodkart3/static/media/biryani.474eb10463e682b7d447.JPG",
+    "static/media/pizza1.JPG": "/foodkart3/static/media/pizza1.39167683d4234aa48ee0.JPG",
+    "static/media/cholechawal.JPG": "/foodkart3/static/media/cholechawal.fe7167357f4e5e486494.JPG",
+    "static/media/burger2.JPG": "/foodkart3/static/media/burger2.76b4992b37870142945a.JPG",
+    "static/media/burger1.JPG": "/foodkart3/static/media/burger1.3fd9d1cc6af36bd94d3a.JPG",
+    "static/media/garlicbread.JPG": "/foodkart3/static/media/garlicbread.a9c671cd61e392d94e6d.JPG",
+    "static/media/pasta.JPG": "/foodkart3/static/media/pasta.ecbbdab3617b290b427b.JPG",
+    "static/media/thali1.JPG": "/foodkart3/static/media/thali1.98c89ed0e1e29a12f029.JPG",
+    "static/media/thali2.JPG": "/foodkart3/static/media/thali2.1aebc9d372eddf9273f0.JPG",
+    "static/media/frenchfries.JPG": "/foodkart3/static/media/frenchfries.5cae0629200e195e82a5.JPG",
+    "static/media/masaladosa.JPG": "/foodkart3/static/media/masaladosa.90525815ad37057d10e7.JPG",
+    "static/media/lemonjuice.JPG": "/foodkart3/static/media/lemonjuice.f92b1f496d117527d3dc.JPG",
+    "static/media/pizza2.JPG": "/foodkart3/static/media/pizza2.c6e475c0d821bdca34ab.JPG",
+    "static/media/strawberryjuice.JPG": "/foodkart3/static/media/strawberryjuice.4da6a0bb529509524c9e.JPG",
+    "static/media/sandwich.JPG": "/foodkart3/static/media/sandwich.ba72c723b02f7fb99ad2.JPG",
+    "static/media/tea.JPG": "/foodkart3/static/media/tea.8ec9bb6e1a998b161414.JPG",
+    "static/media/coffee.JPG": "/foodkart3/static/media/coffee.c115cffc322c24c40402.JPG",
+    "static/media/orangejuice.JPG": "/foodkart3/static/media/orangejuice.d4e21f0a605a2359de26.JPG",
+    "static/media/mangojuice.JPG": "/foodkart3/static/media/mangojuice.d127f7fc70ecbb86ff45.JPG",
+    "static/media/idlisambhar.JPG": "/foodkart3/static/media/idlisambhar.8991a8e2b4be935bc2cd.JPG",
+    "index.html": "/foodkart3/index.html",
+    "main.b925240d.css.map": "/foodkart3/static/css/main.b925240d.css.map",
+    "main.3663d947.js.map": "/foodkart3/static/js/main.3663d947.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b925240d.css",
+    "static/js/main.3663d947.js"
+  ]
+}
