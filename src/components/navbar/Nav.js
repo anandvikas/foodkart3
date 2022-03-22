@@ -54,14 +54,14 @@ const Nav = (props) => {
                     </div>
                     <div className='sec2component' id='navSearchCon'>
                         <form action="xyz.php" className='searchBar'>
-                            <input type="text" placeholder='Search' id='searchInput' />
+                            <input type="text" placeholder='Search' id='searchInput' autoComplete='off'/>
                             <button ><SearchIcon /></button>
                             {/* using event deligation in it  */}
                             <div className='searchSuggestion' id='searchSuggestion'></div>
                         </form>
                     </div>
                     <div className='sec2component' id='navLogCon'>
-                        <button id='login'>Login</button>
+                        <button id='login' onClick={props.showLSform}>Login</button>
                         <NavLink to='/foodkart3/cart' id='cart'><LocalMallIcon /></NavLink>
                     </div>
                 </div>

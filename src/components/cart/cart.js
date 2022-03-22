@@ -3,7 +3,7 @@ import Tooltip from '@mui/material/Tooltip';
 import { useEffect, useState } from 'react';
 import './cart.css'
 
-let totalItemPrice;
+import Button from '@mui/material/Button';
 
 
 const ListItems = (props) => {
@@ -78,28 +78,56 @@ const GetItems = (props) => {
 }
 
 const GetPrice = () => {
-    useEffect(() => {
-        let ips = document.querySelectorAll('.ip')
-        console.log(ips.length)
-    })
+    const [totalItemCost, updateTIC] = useState(0)
+    const [visibility, uVisivility] = useState('hidden')       
+    let tdc = 50
+    const calculate = () => {   
+        let ips = document.querySelectorAll('.ip')      
+        let tic = 0
+        for (let i = 0; i < ips.length; i++) {
+            tic += parseInt((ips[i].innerText.slice(1)))
+        }
+        updateTIC(tic)
+        uVisivility('pricing')
+    }
     
-    // let costs = ips.map((val)=>{
-    //     return val.innerText
-    // })
-    // console.log(costs)
     return (
-        <div className='cartCheckoutCon'>vikas</div>
+        <div className='cartCheckoutCon'>
+            <Button id='ctBtn' onClick={calculate}>Calculate Total</Button>
+            <div className={visibility}>
+                <hr />
+                <p><span>Item Charge</span><span>₹{totalItemCost}</span></p>
+                <p><span>Delivery Charge</span><span>₹{tdc}</span></p>
+                <h3><span>Total</span><span>₹{totalItemCost + tdc}</span></h3>
+                <hr />
+                <Button id='orBtn' onClick={() => { alert('FAKE message : Order is placed') }}>Order</Button>
+            </div>
+        </div>
     )
 }
 const Cart = (props) => {
-
-    return (
-        <section className="cartPageCon">
-            <div className='cartCon'>
-                <GetItems cartItems={props.cartItems} />
-                <GetPrice />
-            </div>
-        </section>
-    )
+    // const [visibility, uVisivility] = useState('hidden')
+    // useEffect(()=>{
+    //     uVisivility('hidden')
+    // }, [GetItems])
+    if (props.cartItems.length === 0) {
+        return (
+            <section className="cartPageCon">
+                <h1 className='cartCon' style={{ textAlign: 'center' }}>
+                    Cart is empty
+                </h1>
+            </section>
+        )
+    } else {
+        return (
+            <section className="cartPageCon">
+                <div className='cartCon'>
+                    <GetItems cartItems={props.cartItems} />
+                    {/* <GetPrice visibility={visibility} uVisivility={uVisivility}/> */}
+                    <GetPrice />
+                </div>
+            </section>
+        )
+    }
 }
 export default Cart;

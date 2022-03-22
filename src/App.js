@@ -2,6 +2,7 @@ import { useState } from "react";
 import {Route, Routes} from 'react-router-dom'
 
 import Nav from "./components/navbar/Nav";
+import LsForm from "./components/login/lsform";
 import Home from './components/home/home'
 import About from './components/about/about'
 import CustSup from './components/customerSupport/custSup'
@@ -33,22 +34,23 @@ const App = () => {
     />)
   }
   // ===========================
-  // TO RENDER FILTERED ITEM LIST 
-  const [state2, update2] = useState(<Home setItem={setItem}/>)
-  function updateListByNav(catg){    
-    console.log(catg)
-    
+  // TO HIDE AND SHOW LOGIN SIGNUP PAGE 
+  const [state2, update2] = useState(<></>)  
+  const hideLSform = () => {    
+    update2(<></>)
+  }
+  const showLSform = () => {    
+    update2(<><LsForm hideLSform={hideLSform}/></>)
   }
   // ===========================
 
 
   return (
     <>
-      <Nav 
-        updateListByNav={updateListByNav}
-      />
+      <Nav showLSform={showLSform} />
+      {state2}
       <Routes>
-        <Route path="/foodkart3/" element={state2}/>
+        <Route path="/foodkart3/" element={<Home setItem={setItem}/>}/>
         <Route path="/foodkart3/about" element={<About/>}/>
         <Route path="/foodkart3/customer_support" element={<CustSup/>}/>
         <Route path="/foodkart3/contact" element={<Contact/>}/>

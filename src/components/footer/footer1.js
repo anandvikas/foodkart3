@@ -1,8 +1,11 @@
+import { useState } from 'react';
+
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
+
 
 // STYLING -------------------------------------------
 var footer1 = {
@@ -63,6 +66,18 @@ var button = {
 
 // COMPONENT --------------------------------------------
 const Footer1 = () => {
+    const [semail, uSemail] = useState({email:''})
+    const changed = (e)=>{
+        let {name, value} = e.target
+        uSemail((prev)=>{
+            return{...prev, [name]:value}
+        })
+    }
+    const submit = (e) =>{
+        e.preventDefault()
+        alert('thanks for subscribing')
+        uSemail({email:''})
+    }
     return (
         <div style={footer1}>
             <div style={sec1}>
@@ -77,10 +92,10 @@ const Footer1 = () => {
             </div>
             <div style={sec2}>
                 <h3 style={heading}>Suscribe to our News Letter</h3>
-                <div style={susCon}>
-                    <input type="text" placeholder="email address" style={input}/>
-                    <button style={button}>Suscribe</button>
-                </div>
+                <form style={susCon} onSubmit={submit}>
+                    <input type="email" placeholder="email address" style={input} required name='email' value={semail.email} onChange={changed}/>
+                    <button type='submit' style={button} >Suscribe</button>
+                </form>
             </div>
         </div>
     );

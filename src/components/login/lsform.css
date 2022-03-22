@@ -1,0 +1,95 @@
+.formPageHolder {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: #001417ef;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#formCloseButton {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    font-size: 20px;
+}
+
+#selectLogin, #selectSignup{
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;       
+    outline: none;
+    background: none;
+    font-weight: bold;
+    color: white;    
+}
+#selectLogin{
+    background-color: white;
+    color: black;
+}
+
+.signupHolder, .loginHolder {
+    background-color: white;
+    width: fit-content;
+    max-width: 95%;
+    height: fit-content;
+    padding: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 20px;    
+    color: black;
+    font-weight: bolder;
+}
+
+.formInput {
+    outline: none;
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid black;
+    font-weight: bolder;
+}
+.formButtons{
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+#formReset, #formSignup, #formLogin{    
+    flex: 40%;
+    margin: 5px;
+    padding: 10px;
+    font-weight: bolder;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+#formReset{
+    background-color: rgba(1, 1, 43, 0.692);
+}
+#formReset:hover{
+    background-color: rgb(1, 1, 43);
+}
+#formSignup, #formLogin{
+    background-color: rgba(2, 43, 1, 0.74);
+}
+#formSignup:hover, #formLogin:hover{
+    background-color: rgb(2, 43, 1);
+}
+.signupHolder>form>p{
+    margin: 10px 0px;
+}
