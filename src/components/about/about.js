@@ -7,7 +7,7 @@ var abHead = {
 }
 var abPara = {
     maxWidth: '800px',
-    margin: 'auto',
+    margin: '20px auto',
     textAlign: 'center',
     padding: '5px 20px',
     marginBottom: '50px'

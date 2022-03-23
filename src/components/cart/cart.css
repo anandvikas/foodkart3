@@ -1,12 +1,14 @@
 .cartPageCon {
     max-width: 1600px;
     padding: 30px 5px;
+    margin: 50px auto;
 }
 
 .cartCon {
     max-width: 1000px;
     margin: auto;
     display: flex;
+    /* border: 1px solid red; */
 }
 
 .cartItemsCon {
@@ -98,4 +100,10 @@
 }
 .hidden{
     display: none;
+}
+
+@media (max-width: 700px) {
+    .cartCon {
+        flex-direction: column;
+    }
 }

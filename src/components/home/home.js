@@ -3,6 +3,7 @@ import { useState } from "react";
 import Banner from "./banner/banner";
 import SortFilter from "./sortfilter/sortfilter";
 import ItemList from "./itemlist/itemlist";
+import NewItems from "./newitems/newitems";
 
 const Home = (props) => {
     const [state1, update1] = useState(<ItemList
@@ -22,6 +23,7 @@ const Home = (props) => {
                     updateListByFilter={updateListByFilter}
                 />
                 {state1}
+                <NewItems/>
             </section>
         </>
     )

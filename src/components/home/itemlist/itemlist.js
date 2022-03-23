@@ -156,8 +156,10 @@ const ItemList = (props) => {
             <h2 className="cText" id="cText">Products</h2>
             <div className="cCon" onClick={(event) => {
                 if (event.target.parentElement.className === 'cCard') {
+                    console.log(event.target.className)
                     navigate(`/foodkart3/product/${event.target.className}`)
                     props.setItem(parseInt(event.target.className))
+                    document.documentElement.scrollTop = 0;
                 }
             }}>
                 <ListContent

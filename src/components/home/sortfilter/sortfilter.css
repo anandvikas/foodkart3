@@ -11,9 +11,10 @@
 }
 .fCon, .sCon, .bCon{
     display: flex;
-    align-items: center;
+    align-items: center;   
+    margin: 10px 5px;
 }
-.fCon>label, .sCon>label{
+.flabel{
     padding: 10px;
     font-size: 20px;
     font-weight: bold;
@@ -24,7 +25,15 @@
     font-weight: bold;
     background: none;
     text-transform: capitalize;
+    /* border: none; */
 }
 option{
     text-transform: capitalize;
+}
+
+@media (max-width: 700px) {
+    .sfCon {
+        flex-direction: column;
+        
+    }
 }

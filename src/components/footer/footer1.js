@@ -83,11 +83,11 @@ const Footer1 = () => {
             <div style={sec1}>
                 <h3 style={heading}>Follow us on</h3>
                 <div style={linksDiv}>
-                    <a href="#"  style={links}><FacebookIcon/></a>
-                    <a href="#"  style={links}><TwitterIcon/></a>
-                    <a href="#"  style={links}><YouTubeIcon/></a>
-                    <a href="#"  style={links}><LinkedInIcon/></a>
-                    <a href="#"  style={links}><InstagramIcon/></a>
+                    <a href="https://www.facebook.com/" target='_blank'  style={links}><FacebookIcon/></a>
+                    <a href="https://twitter.com/" target='_blank'  style={links}><TwitterIcon/></a>
+                    <a href="https://www.youtube.com/" target='_blank'  style={links}><YouTubeIcon/></a>
+                    <a href="https://www.linkedin.com/" target='_blank'  style={links}><LinkedInIcon/></a>
+                    <a href="https://www.instagram.com/" target='_blank'  style={links}><InstagramIcon/></a>
                 </div>
             </div>
             <div style={sec2}>

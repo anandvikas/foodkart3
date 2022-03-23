@@ -16,6 +16,7 @@ const ListItems = (props) => {
         } else {
             alert("can't be less then 1")
         }
+        props.uVisivility('hidden')
     }
     const increase = () => {
         if (count < 5) {
@@ -23,6 +24,7 @@ const ListItems = (props) => {
         } else {
             alert("can't be more then 5")
         }
+        props.uVisivility('hidden')
     }
     // ========================================
 
@@ -41,7 +43,7 @@ const ListItems = (props) => {
                     <h3 className='ip'>₹{count * props.val.price}</h3>
                     <div className='rBtn'>
                         <Tooltip title="Remove" placement="top">
-                            <DeleteIcon onClick={() => { props.remove(props.val.id) }} />
+                            <DeleteIcon onClick={() => { props.remove(props.val.id); props.uVisivility('hidden'); }} />
                         </Tooltip>
                     </div>
                 </div>
@@ -69,7 +71,7 @@ const GetItems = (props) => {
             {
                 itemlist.map((val) => {
                     return (
-                        <ListItems val={val} key={val.id} remove={remove} />
+                        <ListItems val={val} key={val.id} remove={remove} uVisivility={props.uVisivility}/>
                     )
                 })
             }
@@ -77,9 +79,9 @@ const GetItems = (props) => {
     )
 }
 
-const GetPrice = () => {
+const GetPrice = (props) => {
     const [totalItemCost, updateTIC] = useState(0)
-    const [visibility, uVisivility] = useState('hidden')       
+    // const [visibility, uVisivility] = useState('hidden')       
     let tdc = 50
     const calculate = () => {   
         let ips = document.querySelectorAll('.ip')      
@@ -88,13 +90,13 @@ const GetPrice = () => {
             tic += parseInt((ips[i].innerText.slice(1)))
         }
         updateTIC(tic)
-        uVisivility('pricing')
+        props.uVisivility('pricing')
     }
     
     return (
         <div className='cartCheckoutCon'>
             <Button id='ctBtn' onClick={calculate}>Calculate Total</Button>
-            <div className={visibility}>
+            <div className={props.visibility}>
                 <hr />
                 <p><span>Item Charge</span><span>₹{totalItemCost}</span></p>
                 <p><span>Delivery Charge</span><span>₹{tdc}</span></p>
@@ -106,7 +108,7 @@ const GetPrice = () => {
     )
 }
 const Cart = (props) => {
-    // const [visibility, uVisivility] = useState('hidden')
+    const [visibility, uVisivility] = useState('hidden')
     // useEffect(()=>{
     //     uVisivility('hidden')
     // }, [GetItems])
@@ -122,9 +124,9 @@ const Cart = (props) => {
         return (
             <section className="cartPageCon">
                 <div className='cartCon'>
-                    <GetItems cartItems={props.cartItems} />
-                    {/* <GetPrice visibility={visibility} uVisivility={uVisivility}/> */}
-                    <GetPrice />
+                    <GetItems cartItems={props.cartItems} uVisivility={uVisivility}/>
+                    <GetPrice visibility={visibility} uVisivility={uVisivility}/>
+                    {/* <GetPrice /> */}
                 </div>
             </section>
         )

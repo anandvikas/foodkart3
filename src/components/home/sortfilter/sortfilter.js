@@ -20,7 +20,7 @@ const SortFilter = (props) => {
         <>
             <div className='sfCon'>
                 <div className='fCon'>
-                    <label htmlFor='catg'>Select Catagory</label>
+                    <label htmlFor='catg' className='flabel'>Select Catagory</label>
                     <select name='catg' onChange={changed} value={filterValue.catg}>
                         <option>all</option>
                         <option>meals</option>
@@ -29,7 +29,7 @@ const SortFilter = (props) => {
                     </select>
                 </div>
                 <div className='sCon'>
-                    <label htmlFor='sort'>Sort</label>
+                    <label htmlFor='sort' className='flabel'>Sort</label>
                     <select name='sort' onChange={changed} value={filterValue.sort}>
                         <option>Sort By Rating</option>
                         <option>Sort By Latest</option>

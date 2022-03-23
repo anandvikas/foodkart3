@@ -47,7 +47,7 @@ const App = () => {
 
   return (
     <>
-      <Nav showLSform={showLSform} />
+      <Nav showLSform={showLSform} setItem={setItem}/>
       {state2}
       <Routes>
         <Route path="/foodkart3/" element={<Home setItem={setItem}/>}/>

@@ -20,10 +20,10 @@ const Login = (props) => {
                     <h1 className="formTitle">Log In</h1>
                     <p className="formPara">Please fill in this form to log in.</p>
                     <hr />
-                    <label htmlFor="email">Email</label>
+                    <label htmlFor="email" className="lsFormLabel">Email</label>
                     <input type="text" placeholder="Enter Email" name="email" required className="formInput" onChange={changed} />
 
-                    <label htmlFor="psw">Password</label>
+                    <label htmlFor="psw" className="lsFormLabel">Password</label>
                     <input type="password" placeholder="Enter Password" name="psw" required className="formInput" onChange={changed} />
 
                     <div className="formButtons">

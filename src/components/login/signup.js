@@ -24,16 +24,16 @@ const Signup = (props) => {
                 <h1 className="formTitle">Sign Up</h1>
                 <p className="formPara">Please fill in this form to create an account.</p>
                 <hr />
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email" className="lsFormLabel">Email</label>
                 <input type="text" placeholder="Enter Email" name="email" required className="formInput" onChange={changed} />
 
-                <label htmlFor="psw">Password</label>
+                <label htmlFor="psw" className="lsFormLabel">Password</label>
                 <input type="password" placeholder="Enter Password" name="psw" required className="formInput" onChange={changed} />
 
-                <label htmlFor="psw-repeat">Repeat Password</label>
+                <label htmlFor="psw-repeat" className="lsFormLabel">Repeat Password</label>
                 <input type="password" placeholder="Repeat Password" name="rpsw" required className="formInput" onChange={changed} />
 
-                <label>
+                <label className="lsFormLabel">
                     <input type="checkbox" name="remember" /> Remember me
                 </label>
 
