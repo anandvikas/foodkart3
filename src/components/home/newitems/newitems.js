@@ -3,6 +3,15 @@ import './newitems.css'
 
 // IMPORTING DATA --------------------------------------
 import productInfo from '../../../assets/data/food';
+
+// for scrolling ------------------------------------------------
+function scrollLeft(){
+    document.getElementById('scrolldiv').scrollLeft -= 380;
+}
+function scrollRight(){
+    document.getElementById('scrolldiv').scrollLeft += 380;
+}
+// THIS WILL SORT NEWEST 5 -------------------------------
 function sortNew(){
     let ids = []
     for (let i = 0; i < productInfo.length; i++) {        
@@ -19,15 +28,6 @@ function sortNew(){
     } 
     return NewSorted
 }
-
-// for scrolling ------------------------------------------------
-function scrollLeft(){
-    document.getElementById('scrolldiv').scrollLeft -= 380;
-}
-function scrollRight(){
-    document.getElementById('scrolldiv').scrollLeft += 380;
-}
-// THIS WILL SORT NEWEST 5 -------------------------------
 function GetNew() {
     let n = 8
     let newN = sortNew().slice(0, n)

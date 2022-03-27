@@ -120,8 +120,7 @@ const getFiltered = (request, sortedItems) => {
         filteredItems = sortedItems.filter((val) => {            
             return (val.catagory+'s' === request)
         })
-    }
-    
+    }    
     return filteredItems
 }
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

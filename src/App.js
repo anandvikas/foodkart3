@@ -16,11 +16,23 @@ const App = () => {
 
   // FOR SHOPPING CART 
   const [cartItems, updateCartItems] = useState([])
+  // this will add item to cart list
   const addToCart = (item)=>{    
     updateCartItems((prev)=>{
       let arr = [...new Set([...prev, item])]
       return arr      
     })    
+  }
+  // this will remove item from cart list 
+  const removeFromCart = (id)=>{
+    console.log(id)
+    updateCartItems((prev)=>{
+      return (
+        prev.filter((val)=>{
+          return val.id !== id
+        })
+      )
+    })
   }
   
   // ==========================
@@ -54,7 +66,7 @@ const App = () => {
         <Route path="/foodkart3/about" element={<About/>}/>
         <Route path="/foodkart3/customer_support" element={<CustSup/>}/>
         <Route path="/foodkart3/contact" element={<Contact/>}/>
-        <Route path="/foodkart3/cart" element={<Cart cartItems={cartItems}/>}/>
+        <Route path="/foodkart3/cart" element={<Cart cartItems={cartItems} removeFromCart={removeFromCart}/>}/>
         <Route path="/foodkart3/product/:id" element={state1}/>
         <Route path="*" element={<h1>404 error</h1>}/>
       </Routes>

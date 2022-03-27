@@ -19,6 +19,10 @@ import strawberryjuice from '../images/product_images/strawberryjuice.JPG'
 import tea from '../images/product_images/tea.JPG'
 import thali1 from '../images/product_images/thali1.JPG'
 import thali2 from '../images/product_images/thali2.JPG'
+import pastry1 from '../images/product_images/pastry1.JPG'
+import pastry2 from '../images/product_images/pastry2.JPG'
+import pastry3 from '../images/product_images/pastry3.JPG'
+import cupcake1 from '../images/product_images/cupcake1.JPG'
 
 const productInfo = [
     {
@@ -200,6 +204,42 @@ const productInfo = [
         rating: 4.5,
         image: thali2,
         description: 'This Thali is very tasty !'
+    },
+    {
+        id: 21,
+        name: 'Pastry 1',
+        catagory: 'snack',
+        price: 20,
+        rating: 4.4,
+        image: pastry1,
+        description: 'This Pastry is very tasty !'
+    },
+    {
+        id: 22,
+        name: 'Pastry 2',
+        catagory: 'snack',
+        price: 25,
+        rating: 5,
+        image: pastry2,
+        description: 'This Pastry is very tasty !'
+    },
+    {
+        id: 23,
+        name: 'Pastry 3',
+        catagory: 'snack',
+        price: 30,
+        rating: 5,
+        image: pastry3,
+        description: 'This Pastry is very tasty !'
+    },
+    {
+        id: 24,
+        name: 'Cup cake 1',
+        catagory: 'snack',
+        price: 15,
+        rating: 4.2,
+        image: cupcake1,
+        description: 'This Cup Cake is very tasty !'
     },
 ]
 export default productInfo;

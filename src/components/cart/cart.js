@@ -1,6 +1,6 @@
 import DeleteIcon from '@mui/icons-material/Delete';
 import Tooltip from '@mui/material/Tooltip';
-import { useEffect, useState } from 'react';
+import {useState} from 'react';
 import './cart.css'
 
 import Button from '@mui/material/Button';
@@ -63,6 +63,7 @@ const GetItems = (props) => {
             })
             return updated
         })
+        props.removeFromCart(id)
     }
     // =======================
 
@@ -80,9 +81,8 @@ const GetItems = (props) => {
 }
 
 const GetPrice = (props) => {
-    const [totalItemCost, updateTIC] = useState(0)
-    // const [visibility, uVisivility] = useState('hidden')       
-    let tdc = 50
+    const [totalItemCost, updateTIC] = useState(0)                
+    let tdc = 50  // delivery cost
     const calculate = () => {   
         let ips = document.querySelectorAll('.ip')      
         let tic = 0
@@ -91,8 +91,7 @@ const GetPrice = (props) => {
         }
         updateTIC(tic)
         props.uVisivility('pricing')
-    }
-    
+    }    
     return (
         <div className='cartCheckoutCon'>
             <Button id='ctBtn' onClick={calculate}>Calculate Total</Button>
@@ -108,10 +107,10 @@ const GetPrice = (props) => {
     )
 }
 const Cart = (props) => {
-    const [visibility, uVisivility] = useState('hidden')
-    // useEffect(()=>{
-    //     uVisivility('hidden')
-    // }, [GetItems])
+    // to hide update the GetPrice on any change in GetItems
+    const [visibility, uVisivility] = useState('hidden')    
+
+    // if cart is empty 
     if (props.cartItems.length === 0) {
         return (
             <section className="cartPageCon">
@@ -120,13 +119,14 @@ const Cart = (props) => {
                 </h1>
             </section>
         )
-    } else {
+    } 
+    // if cart is not empty 
+    else {
         return (
             <section className="cartPageCon">
                 <div className='cartCon'>
-                    <GetItems cartItems={props.cartItems} uVisivility={uVisivility}/>
-                    <GetPrice visibility={visibility} uVisivility={uVisivility}/>
-                    {/* <GetPrice /> */}
+                    <GetItems cartItems={props.cartItems} uVisivility={uVisivility} removeFromCart={props.removeFromCart}/>
+                    <GetPrice visibility={visibility} uVisivility={uVisivility}/>                    
                 </div>
             </section>
         )
